@@ -42,11 +42,10 @@ contract Create2Factory {
      * @notice Predetermine hash using bytecode and salt
      */
 
-    function getAddress(bytes memory _bytecode, uint256 _salt)
-        external
-        view
-        returns (address)
-    {
+    function getAddress(
+        bytes memory _bytecode,
+        uint256 _salt
+    ) external view returns (address) {
         bytes32 hash = keccak256(
             abi.encodePacked(
                 bytes1(0xff),
